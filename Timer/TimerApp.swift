@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct TimerApp: App {
+    
+    @StateObject var model: TimerModel = TimerModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(model)
         }
     }
 }
